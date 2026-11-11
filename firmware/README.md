@@ -49,10 +49,10 @@ This makes Z = 0 the floor of the source tray. With the tray empty:
 
 1. `G28`, then `G1 X150 F3000`, then `PROBE`.
 2. The console says `z=…`. Say it says `z=3.2`.
-3. In `printer.cfg`, set `position_endstop` and `position_max` under `[stepper_z]` to 100 − 3.2 = `96.8`. SAVE & RESTART.
+3. In `printer.cfg`, set `position_endstop` and `position_max` under `[stepper_z]` to 60 − 3.2 = `56.8`. SAVE & RESTART.
 4. Repeat 1. Check: it now says z between −0.5 and 0.5.
 
-If `PROBE` says `No trigger`, the floor is too far down: set both numbers to `110`, SAVE & RESTART, and start again at 1.
+If `PROBE` says `No trigger`, the floor is too far down: set both numbers to `70`, SAVE & RESTART, and start again at 1.
 
 ## 6. Run
 

@@ -40,17 +40,17 @@ Fixed numbers:
 | Card | 63 × 88 mm, ~1.8 g, ~0.3 mm thick |
 | Source stack capacity | 100 cards (≈ 30 mm tall) |
 | X travel | 300 mm |
-| Z travel | 100 mm |
+| Z travel | 60 mm (Z = −2 to 60; the Z endstop is at the top) |
 | Z = 0 | the floor of the source tray |
 | Travel height (Z while moving in X) | 45 mm |
 | Bins | open boxes, 70 × 95 mm inside, 40 mm tall. Cards drop in. |
-| Source tray | same inside size as a bin, with a 1 mm lip along the far long edge (see §5) |
+| Source tray | same as a bin |
 
 ## 4. Motion
 
 - X: NEMA 17 stepper, GT2 belt, 20-tooth pulley, idler at the far end. Head rides on two 8 mm hardened steel rods with LM8UU bearings (4 bearings). Endstop switch at X = 0.
 - Z: NEMA 17 stepper, T8×8 lead screw (8 mm per turn), brass nut. Head rides on two 8 mm rods with LM8UU bearings (2 bearings). Endstop switch at the top.
-- Frame: 2020 aluminum extrusion, corner brackets, M5 T-nuts. All custom parts are 3D printed.
+- Frame: two 2020 base rails (460 mm), two 2020 posts (178 mm), a laser-cut 6 mm deck on the rails. The X rods run between two printed end blocks bolted to the backs of the posts. All other custom parts are 3D printed.
 
 Why these: every part is a standard 3D-printer part. The designLab has most of them, and every one has a known Klipper config.
 
@@ -58,10 +58,11 @@ Why these: every part is a standard 3D-printer part. The designLab has most of t
 
 - One silicone suction cup, 10–15 mm, on a plunger that slides 3 mm against a light spring. A microswitch sits behind the plunger. When the cup presses on a card, the plunger slides and the switch trips. That is the touch switch in §2 step 2.
 - The cup is centered left-right on the card and offset 20 mm from one short edge. Lifting off-center peels the card instead of lifting it flat, which is what sheds a second card.
-- The source tray has a 1 mm lip on the far long edge. The top card bends over the lip as it peels; a second card stuck underneath gets held back by the lip.
 - Pump: DFRobot 370 mini vacuum pump, 12 V. Tubing: 4 mm ID silicone. The pump plugs into the board's FAN1 port, which Klipper switches on and off. Releasing a card = pump off. If release is too slow (> 1 s), add a small vent solenoid; that is the only reason to add one.
 
-Tunables, in order of what to try when double-feeds happen: cup offset from the edge, peel speed in step 4, dwell in step 3, lip height.
+Tunables, in order of what to try when double-feeds happen: peel speed in step 4, dwell in step 3, cup offset from the edge (a CAD change).
+
+No separator lip: the stack top moves down as cards leave, so a fixed lip would only work for the first few cards.
 
 ## 6. Electronics
 
@@ -98,7 +99,7 @@ Camera, OpenCV, Scryfall, sorting by color, moving stacks, more than two bins, a
 Do these in order. Do not start a step until the one before is done.
 
 1. Order the BOM (`BOM.csv`). While waiting: CAD.
-2. CAD in Onshape: frame, X carriage, Z carriage, suction head, source tray, bins. Export STLs to `cad/stl/`. Done when every printed part exists as an STL and the assembly has no interferences.
+2. CAD in Onshape: run `cad/mtg_card_sorter.fs` (see `cad/README.md`). Check fit, change what you need, export STLs to `cad/stl/`. Done when every printed part exists as an STL and nothing collides at any head position.
 3. Print and assemble the frame and both axes. Done when the head slides freely by hand along X and Z.
 4. Wire, flash, and configure: follow `firmware/README.md` steps 1–5. Done when `G28` homes both axes and `PROBE` on the empty tray reads z ≈ 0.
 5. Mount the suction head and pump. Done when `PICK` lifts a card and `PLACE` drops it.
