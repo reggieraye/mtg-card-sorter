@@ -1,0 +1,25 @@
+qty,item,spec,vendor,link,est_price_usd,status
+1,Control board,BIGTREETECH Manta M4P,BIQU,https://biqu.equipment/products/manta-m4p-m8p,60,to order
+1,Compute module,BIGTREETECH CB1 (with heatsink + 32 GB microSD),BIQU,https://biqu.equipment/products/bigtreetech-cb1,35,to order
+2,Stepper driver,TMC2209 (UART),BIQU or Amazon,,20,to order
+1,Power supply,12 V 5 A DC with barrel-to-screw-terminal adapter,Amazon,,18,to order
+2,Stepper motor,NEMA 17 ~40 N·cm,designLab stock,,0,have
+1,Vacuum pump,DFRobot 370 mini vacuum pump 12 V,RobotShop,https://www.robotshop.com/products/dfrobot-370-mini-vacuum-pump,7,to order
+1,Suction cup,silicone bellows cup 10–15 mm with 4 mm barb,Amazon,,6,to order
+1,Tubing,4 mm ID silicone 1 m,Amazon,,6,to order
+3,Microswitch,lever microswitch with wire leads,designLab stock or Amazon,,6,check stock
+1,Extrusion,2020 aluminum 6 × 500 mm (cut to length),Amazon kit or McMaster,,30,to order
+1,Extrusion hardware,M5 T-nuts (40) + corner brackets (12) + M5×10 screws (40),Amazon kit,,15,to order
+2,X rod,8 mm hardened steel linear rod 400 mm,Amazon or McMaster,,14,to order
+2,Z rod,8 mm hardened steel linear rod 150 mm,Amazon or McMaster,,8,to order
+6,Linear bearing,LM8UU,designLab stock or Amazon,,8,check stock
+1,Belt,GT2 6 mm open belt 1 m,designLab stock or Amazon,,6,check stock
+1,Pulley,GT2 20-tooth 5 mm bore,designLab stock or Amazon,,4,check stock
+1,Idler,GT2 20-tooth idler 3 mm or 5 mm bore,designLab stock or Amazon,,4,check stock
+1,Lead screw,T8×8 150 mm with brass nut,Amazon,,10,to order
+1,Coupler,5 mm to 8 mm flexible shaft coupler,designLab stock or Amazon,,5,check stock
+1,Spring,compression spring ~6 mm OD × 15 mm (touch plunger),designLab stock or hardware store,,1,check stock
+1,Fasteners,M3 screws/nuts/heat-set inserts assortment,designLab stock,,0,have
+1,Filament,PLA or PETG ~300 g for all printed parts,designLab stock,,0,have
+1,Camera (optional),1080p USB camera — only after SPEC §1 is met,Amazon,https://www.amazon.com/innomaker-Computer-Raspberry-Support-Windows/dp/B0CNCSFQC1,19,later
+1,Vent solenoid (optional),12 V 2-way air solenoid valve — only if card release > 1 s,Amazon,,8,later
