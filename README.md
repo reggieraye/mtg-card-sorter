@@ -11,7 +11,7 @@ The sorting part (camera, card recognition) is not in this repo yet. First the m
 | `SPEC.md` | What the machine is and does. Read this first. Everything else follows it. |
 | `BOM.csv` | Every part, where to get it, rough price, whether we have it. |
 | `cad/` | Onshape link + exported STLs of every printed part. |
-| `firmware/` | Klipper `printer.cfg` and the wiring diagram. |
+| `firmware/` | Klipper `printer.cfg`, wiring, and step-by-step setup. |
 | `control/` | Empty until a camera is added. |
 | `bench/` | Test logs and the plot. |
 
@@ -24,7 +24,7 @@ Current step: 1 (ordering parts, starting CAD).
 ## Who does what
 
 - Joe: CAD, printing, assembly, wiring, running tests, writing up results.
-- Mr. Raye: reviews CAD, writes `firmware/printer.cfg` and `firmware/wiring.md` (step 4), helps debug.
+- Mr. Raye: reviews CAD, maintains `firmware/printer.cfg` and `firmware/wiring.md`, helps debug.
 
 ## Working rules
 
