@@ -1,6 +1,6 @@
 # MTG card sorter
 
-A two-axis gantry with a suction cup that picks Magic: The Gathering cards off a stack one at a time and drops them into bins. STEM Scholars project, St. Luke's School, 2026–27.
+This repo is a clearinghouse for everything that's needed to build a two-axis gantry with a suction cup that picks Magic: The Gathering cards off a stack one at a time and drops them into bins. 
 
 The sorting part (camera, card recognition) is not in this repo yet. First the machine has to move one card at a time, reliably. See `SPEC.md` §1 for the exact finish line.
 
