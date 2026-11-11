@@ -1,6 +1,6 @@
 # SPEC — MTG card pick-and-place gantry (MVP)
 
-Owner: Joe Fraser. Advisor: Mr. Raye. Last changed: 2026-11-11.
+Owner: Joe Fraser. Advisor: Mr. Raye and Mr. Agro. Last changed: 2026-11-11.
 
 This file is the single source of truth. If something here is wrong, change it here first.
 
